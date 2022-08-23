@@ -1,0 +1,33 @@
+INSERT INTO dojos(name)
+VALUES ("San Francisco"), ("Los Angeles"), ("Online");
+
+SELECT * FROM dojos;
+
+INSERT INTO ninjas(first_name, last_name, age, dojo_id)
+VALUES ("Tom", "Whatever", 19, 1), ("Adrian", "WHO", 20, 1), ("Joe", "Ok", 29, 1);
+
+INSERT INTO ninjas(first_name, last_name, age, dojo_id)
+VALUES ("Kelly", "bing", 20, 2), ("Ashely", "Sauce", 20, 2), ("Joey", "hmm", 18, 2);
+
+INSERT INTO ninjas(first_name, last_name, age, dojo_id)
+VALUES ("Alan", "Harper", 30, 3), ("Charles", "Smurf", 35, 3), ("Jake", "Buddy" , 25, 3);
+
+SELECT * FROM ninjas;
+
+SELECT * FROM dojos
+JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = 1;
+
+SELECT * FROM dojos
+JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = 2;
+
+SELECT * FROM dojos
+JOIN ninjas ON dojos.id = ninjas.dojo_id
+WHERE dojos.id = 3;
+
+
+
+
+
+
